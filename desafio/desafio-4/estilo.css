@@ -59,6 +59,7 @@ section.imagem > p {
     background-color: rgba(0, 0, 0, 0.514);
     color: white;
     display: inline-block;
+    padding: 5px;
 }
 
 #flor {
