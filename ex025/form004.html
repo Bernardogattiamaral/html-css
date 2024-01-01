@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
+    <style>
+        div {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Testando Formulários</h1>
 
     <form action="cadastro.php" method="get" autocomplete="on">
-        <div>
-            <label for="iemail">E-mail</label>
-            <input type="email" name="email" id="iemail" autocomplete="email">
-        </div>
-        <div>
-            <label for="itel">Telefone</label>
-            <input type="tel" name="tel" id="itel" required autocomplete="tel-national" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
-        </div>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" autocomplete="name">
+            </div>
+            <div>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email">
+            </div>
+            <div>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" required autocomplete="tel-national" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(00)12345-1234">
+            </div>
+        </fieldset>
         <!--Estudar mais sobre RegEx-->
 
         <p>
